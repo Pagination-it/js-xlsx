@@ -27,4 +27,7 @@ if "%1" == "help" (
 ) else (
 	type bits\*.js > xlsx.flow.js
 	node misc\strip_flow.js > xlsx.js
+	:: @todo copy remaining files in the dist folders
+	copy LICENSE dist/LICENSE
+	copy xlsx.js "dist/xlsx.js"
 )
